@@ -5,18 +5,9 @@ var express = require('express');
 module.exports = function(app){ 
 	app.get('/getAllUsers', function(req, res){
         // get and return all the todos after you create another
-        var data = userModel.getAllUsers();
-        //console.log(data);
-        res.json(111);
-
-        /*user.find(function(err, result) {
-            if (err){
-                res.json(err);
-            }else{
-                console.log(result);
-                res.json(result);
-            }
-        });*/
+        userModel.getAllUsers().exec(function (err, result) {
+            res.json(result);
+        });
 	});
 
 	app.post('/newUser', function(req, res){
