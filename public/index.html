@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular Todo App</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+   
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="http://localhost/myApp/public/main.js"></script>
+    <script src="http://localhost/myApp/public/controller.js"></script>
+</head>
+<body  align="center" ng-app="myApp" ng-controller="main">
+	
+	<button type="button" ng-click="test()">Click</button>
+
+	<table border="1"  align="center" ng-hide="table">
+		<tr>
+			<th>Name</th>
+			<th>Username</th>
+			<th>Password</th>
+		</tr>
+		<tr ng-repeat="i in data">
+			<td> {{ i.name }} </td>
+			<td> {{ i.username }} </td>
+			<td> {{ i.password }} </td>
+		</tr>
+	</table>
+
+</body>
+</html>
